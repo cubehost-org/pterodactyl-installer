@@ -28,8 +28,8 @@ set -e
 #                                                                                    #
 ######################################################################################
 
-export GITHUB_SOURCE="v1.2.0"
-export SCRIPT_RELEASE="v1.2.0"
+export GITHUB_SOURCE="${GITHUB_SOURCE:-master}"
+export SCRIPT_RELEASE="${SCRIPT_RELEASE:-canary}"
 export GITHUB_BASE_URL="https://raw.githubusercontent.com/cubehost-org/pterodactyl-installer"
 
 LOG_PATH="/var/log/pterodactyl-installer.log"
@@ -43,7 +43,7 @@ fi
 
 # Always remove lib.sh, before downloading it
 [ -f /tmp/lib.sh ] && rm -rf /tmp/lib.sh
-curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/master/lib/lib.sh
+curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/"$GITHUB_SOURCE"/lib/lib.sh
 # shellcheck source=lib/lib.sh
 source /tmp/lib.sh
 
