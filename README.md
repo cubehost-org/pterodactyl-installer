@@ -56,7 +56,7 @@ _\* Indicates an operating system and release that previously was supported by t
 To use the installation scripts, simply run this command as root. The script will ask you whether you would like to install just the panel, just Wings or both.
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/cubehost-org/pterodactyl-installer/master/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/minecraft-server-hosting-org/pterodactyl-installer/master/install.sh)
 ```
 
 _Note: On some systems, it's required to be already logged in as root before executing the one-line command (where `sudo` is in front of the command does not work)._
